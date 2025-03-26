@@ -16,37 +16,37 @@ class Person {
 
 class Employee extends Person {
     int emp_id;
-    String c_name;
-    String quali;
+    String company_name;
+    String qualification;
     int salary;
 
-    Employee(String name, String gender, String address, int age, int emp_id, String c_name, String quali, int salary) {
+    Employee(String name, String gender, String address, int age, int emp_id, String company_name, String qualification, int salary) {
         
         super(name, gender, address, age);
         this.emp_id = emp_id;
-        this.c_name = c_name;
-        this.quali = quali;
+        this.company_name = company_name;
+        this.qualification = qualification;
         this.salary = salary;
     }
 
     void displayEmployeeDetails() {
         System.out.println("Employee ID: " + emp_id);
-        System.out.println("Company Name: " + c_name);
-        System.out.println("Qualification: " + quali);
+        System.out.println("Company Name: " + company_name);
+        System.out.println("Qualification: " + qualification);
         System.out.println("Salary: " + salary);
     }
 }
 
 class Teacher1 extends Employee {
     String subject;
-    String depart;
+    String department;
     int t_id;
 
-    Teacher1(String name, String gender, String address, int age, int emp_id, String c_name, String quali, int salary, String subject, String depart, int t_id) {
+    Teacher1(String name, String gender, String address, int age, int emp_id, String company_name, String qualification, int salary, String subject, String department, int t_id) {
        
-        super(name, gender, address, age, emp_id, c_name, quali, salary);
+        super(name, gender, address, age, emp_id, company_name, qualification, salary);
         this.subject = subject;
-        this.depart = depart;
+        this.depart = department;
         this.t_id = t_id;
     }
 
@@ -59,7 +59,7 @@ class Teacher1 extends Employee {
         System.out.println("Age: " + age);
         displayEmployeeDetails(); 
         System.out.println("Subject: " + subject);
-        System.out.println("Department: " + depart);
+        System.out.println("Department: " + department);
         System.out.println("Teacher ID: " + t_id);
     }
 }
@@ -87,21 +87,21 @@ class Teacher1 extends Employee {
             System.out.println("Enter employee ID: ");
             int emp_id = sc.nextInt();
             System.out.println("Enter company name: ");
-            String c_name = sc1.nextLine();  
+            String company_name = sc1.nextLine();  
             c_name = sc1.nextLine();
             System.out.println("Enter qualification: ");
-            String quali = sc1.nextLine();
+            String qualification = sc1.nextLine();
             System.out.println("Enter salary: ");
             int salary = sc.nextInt();
             System.out.println("Enter subject: ");
             String subject = sc1.nextLine();
             subject = sc1.nextLine();
             System.out.println("Enter department: ");
-            String depart = sc1.nextLine();
+            String department = sc1.nextLine();
             System.out.println("Enter teacher ID: ");
             int t_id = sc.nextInt();
 
-            teachers[i] = new Teacher1(name, gender, address, age, emp_id, c_name, quali, salary, subject, depart, t_id);
+            teachers[i] = new Teacher1(name, gender, address, age, emp_id, company_name, qualification, salary, subject, department, t_id);
         }
 
         for (int i = 0; i < n; i++) {
