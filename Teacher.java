@@ -46,7 +46,7 @@ class Teacher1 extends Employee {
        
         super(name, gender, address, age, emp_id, company_name, qualification, salary);
         this.subject = subject;
-        this.depart = department;
+        this.department = department;
         this.t_id = t_id;
     }
 
@@ -88,7 +88,7 @@ class Teacher1 extends Employee {
             int emp_id = sc.nextInt();
             System.out.println("Enter company name: ");
             String company_name = sc1.nextLine();  
-            c_name = sc1.nextLine();
+            company_name = sc1.nextLine();
             System.out.println("Enter qualification: ");
             String qualification = sc1.nextLine();
             System.out.println("Enter salary: ");
