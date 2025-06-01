@@ -1,74 +1,50 @@
 import java.util.*;
-class Product
-{
-int p_code;
-String p_name;
-int price;
+class Product {
+    int pcode,price;
+    String pname;
 }
-public class Product
-{
- public static void main(String args[])
- {
-  Product p1 = new Product();
-  Product p2 = new Product();
-  Product p3 = new Product();
-  
-  Scanner sc = new Scanner(System.in);
-  
-  
-  System.out.println("Enter first product  code : ");
-  p1.p_code = sc.nextInt();
-  
-  System.out.println("Enter first product  price : ");
-  p1.price = sc.nextInt();
-  
-  sc.nextLine();
-  
-  System.out.println("Enter  first product  name : ");
-  p1.p_name = sc.nextLine();
-  
-  System.out.println("Enter second product  code : ");
-  p2.p_code = sc.nextInt();
-  
-  System.out.println("Enter second product  price : ");
-  p2.price = sc.nextInt();
-  
-  sc.nextLine();
-  
-  System.out.println("Enter second product  name : ");
-  p2.p_name = sc.nextLine();
-  
-  System.out.println("Enter third product code : ");
-  p3.p_code = sc.nextInt();
-  
-  System.out.println("Enter third product price : ");
-  p3.price = sc.nextInt();
-  
-  sc.nextLine();
-  
-  System.out.println("Enter third product name : ");
-  p3.p_name = sc.nextLine();
-  System.out.println("......Product having the lowest price....");
-  if(p1.price < p2.price && p1.price < p3.price)
-  {
-   System.out.println("Product name : " + p1.p_name);
-   System.out.println("Product code : " + p1.p_code);
-   System.out.println("Product price : " + p1.price);
-  }
-  else if(p2.price < p3.price)
-  {
-   System.out.println("Product name : " + p2.p_name);
-   System.out.println("Product code : " + p2.p_code);
-   System.out.println("Product price : " + p2.price);
-  }
-  else
-  {
-   System.out.println("Product name : " + p3.p_name);
-   System.out.println("Product code : " + p3.p_code);
-   System.out.println("Product price : " + p3.price);
-  }
- }
-}
+public class Main {
+    public static void main(String[]args)
+    {
+        Product p1=new Product();
+        Product p2=new Product();
+        Product p3=new Product();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the code of the first product :");
+        p1.pcode=sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter the name of the first product :");
+        p1.pname=sc.nextLine();
+        System.out.println("enter the price of the first product :");
+        p1.price=sc.nextInt();
+        System.out.println("enter the code of the second product :");
+        p2.pcode=sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter the name of the second product :");
+        p2.pname=sc.nextLine();
+        System.out.println("enter the price of the second product :");
+        p2.price=sc.nextInt();
+        System.out.println("enter the code of the third product :");
+        p3.pcode=sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter the name of the third product :");
+        p3.pname=sc.nextLine();
+        System.out.println("enter the price of the third product :");
+        p3.price=sc.nextInt();
+        Product lowest=p1;
+        if(p2.price<lowest.price)
+        {
+            lowest=p2;
+        }
+        else if(p3.price<lowest.price)
+        {
+            lowest=p3;
+        }
+        System.out.println(lowest.pname+" has the lowest price with code "+ lowest.pcode +" and price "+lowest.price);
+        }
+        }
+
+
 
 
 
